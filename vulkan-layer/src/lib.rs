@@ -838,7 +838,7 @@ impl<T: Layer> Global<T> {
         };
     }
 
-    extern "system" fn enumerate_physical_devices(
+    pub extern "system" fn enumerate_physical_devices(
         instance: vk::Instance,
         p_physical_device_count: *mut u32,
         p_physical_devices: *mut vk::PhysicalDevice,
@@ -867,7 +867,7 @@ impl<T: Layer> Global<T> {
         res
     }
 
-    extern "system" fn enumerate_physical_device_groups(
+    pub extern "system" fn enumerate_physical_device_groups(
         instance: vk::Instance,
         p_physical_device_group_count: *mut u32,
         p_physical_device_group_properties: *mut vk::PhysicalDeviceGroupProperties,
